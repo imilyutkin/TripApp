@@ -54,6 +54,10 @@ gulp.task('vendors', function () {
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
     .pipe(gulp.dest('app/vendor/bootstrap-grid'));
+    gulp.src('bower_components/normalize.css/normalize.css')    
+    .pipe(rename({suffix: '.min'}))
+    .pipe(minifycss())
+    .pipe(gulp.dest('app/vendor/normalize'));
 });
 
 gulp.task('default', ['styles', 'vendors', 'express', 'livereload', 'watch'], function() {
