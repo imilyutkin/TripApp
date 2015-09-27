@@ -28,10 +28,26 @@ function notifyLiveReload(event) {
 }
 
 gulp.task('watch', function() {
+	gulp.watch('app/css/*.css', ['styles']);
 	gulp.watch('app/css/*.css', notifyLiveReload);
 	gulp.watch('app/*.html', notifyLiveReload);
 });	
 
-gulp.task('default', [/*'styles',*/ 'express', 'livereload', 'watch'], function() {
+gulp.task('styles', function () {
+	//gulp.src('sass/*.sass')
+	gulp.src('app/css/*.css')
+	/*.pipe(sass({
+		includePaths: require('node-bourbon').includePaths
+	}).on('error', sass.logError))*/
+	//.pipe(rename({suffix: '.min', prefix : '_'}))
+	.pipe(autoprefixer({
+		browsers: ['last 15 versions'],
+		cascade: true
+	}))
+	//.pipe(minifycss())
+	.pipe(gulp.dest('app'));
+});
+
+gulp.task('default', ['styles', 'express', 'livereload', 'watch'], function() {
 
 });
