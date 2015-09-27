@@ -49,6 +49,13 @@ gulp.task('styles', function () {
     .pipe(gulp.dest('app/css'));
 });
 
-gulp.task('default', ['styles', 'express', 'livereload', 'watch'], function() {
+gulp.task('vendors', function () {
+    gulp.src('bower_components/Boostrap Grid/grid.css')    
+    .pipe(rename({suffix: '.min'}))
+    .pipe(minifycss())
+    .pipe(gulp.dest('app/vendor/bootstrap-grid'));
+});
+
+gulp.task('default', ['styles', 'vendors', 'express', 'livereload', 'watch'], function() {
 
 });
