@@ -8,8 +8,11 @@
     margin: 10px; }
   .header-row {
     height: 70px; }
-  .top-menu {
-    display: none; } }
+    .header-row .top-menu {
+      display: none; }
+      .header-row .top-menu ul li {
+        padding: 0 25px;
+        font-size: 14px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -24,7 +27,9 @@
     transform: none !important;
     /*CSS animations*/
     -webkit-animation: none !important;
-    animation: none !important; } }
+    animation: none !important; }
+  .toggle-menu {
+    margin-right: 15px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
