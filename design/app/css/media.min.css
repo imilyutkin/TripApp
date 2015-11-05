@@ -10,9 +10,15 @@
     height: 70px; }
     .header-row .top-menu {
       display: none; }
-      .header-row .top-menu ul li {
-        padding: 0 25px;
-        font-size: 14px; } }
+      .header-row .top-menu ul {
+        margin-top: 12px; }
+        .header-row .top-menu ul li {
+          padding: 0 25px;
+          font-size: 14px;
+          display: block;
+          background-color: #e74c3c; }
+          .header-row .top-menu ul li a {
+            line-height: 70px; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -29,7 +35,9 @@
     -webkit-animation: none !important;
     animation: none !important; }
   .toggle-menu {
-    margin-right: 15px; } }
+    margin-right: 15px; }
+  .header-row .top-menu ul li a {
+    line-height: 50px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {

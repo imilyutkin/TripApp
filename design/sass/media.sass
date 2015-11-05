@@ -1,5 +1,5 @@
 /*==========  Desktop First Method  ==========*/
-
+$main-color: #e74c3c;
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
   /**/
@@ -18,9 +18,14 @@
     .top-menu
       display: none
       ul
+        margin-top: 12px;
         li
           padding: 0 25px
           font-size: 14px
+          display: block
+          background-color: $main-color
+          a
+            line-height: 70px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -48,6 +53,13 @@
 
   .toggle-menu
     margin-right: 15px
+
+  .header-row
+    .top-menu
+      ul
+        li
+          a
+            line-height: 50px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
