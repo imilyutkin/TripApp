@@ -3,6 +3,11 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   /**/
+  .top-line .logo img {
+    width: 50px;
+    margin: 10px; }
+  .header-row {
+    height: 70px; }
   .top-menu {
     display: none; } }
 
@@ -22,10 +27,51 @@
     animation: none !important; } }
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /**/
+  .top-line .logo img {
+    width: 40px;
+    margin: 5px; }
+  .header-row {
+    height: 50px; }
+  .toggle-menu {
+    width: 40px;
+    height: 0px;
+    margin-right: 7px;
+    margin-top: 7px; }
+    .toggle-menu span {
+      position: relative;
+      display: block; }
+      .toggle-menu span:after,
+      .toggle-menu span:before {
+        left: 0;
+        top: -11px; }
+      .toggle-menu span:after {
+        top: 11px; }
+      .toggle-menu span,
+      .toggle-menu span:after,
+      .toggle-menu span:before {
+        height: 6px;
+        -webkit-border-radius: 3px;
+                border-radius: 3px; }
+  .toggle-menu.on span:before {
+    -webkit-transform: rotate(45deg) translate(4px, 12px);
+        -ms-transform: rotate(45deg) translate(4px, 12px);
+            transform: rotate(45deg) translate(4px, 12px); }
+  .toggle-menu.on span:after {
+    -webkit-transform: rotate(-45deg) translate(3px, -12px);
+        -ms-transform: rotate(-45deg) translate(3px, -12px);
+            transform: rotate(-45deg) translate(3px, -12px); } }
+
 /* Custom, iPhone Retina */
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone Retina */
 /* Extra Small Devices, Phones */
 /* Small Devices, Tablets */
 /* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /**/
+  .top-menu {
+    display: block !important; } }
+
 /* Large Devices, Wide Screens */

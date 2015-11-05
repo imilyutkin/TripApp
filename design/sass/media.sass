@@ -7,8 +7,19 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
   /**/
+  .top-line
+    .logo
+        img
+          width: 50px
+          margin: 10px
+
+
+  .header-row
+    height: 70px
+
   .top-menu
     display: none
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -38,7 +49,40 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
   /**/
+  .top-line
+    .logo
+        img
+          width: 40px
+          margin: 5px
 
+  .header-row
+    height: 50px
+
+  .toggle-menu
+    width: 40px
+    height: 0px
+    margin-right: 7px
+    margin-top: 7px
+    span 
+      position: relative
+      display: block
+      &:after,
+      &:before
+        left: 0
+        top: -11px
+      &:after
+        top: 11px
+      &,
+      &:after,
+      &:before 
+        height: 6px
+        border-radius: 3px
+
+  .toggle-menu.on span 
+    &:before 
+      transform: rotate(45deg) translate(4px, 12px)
+    &:after 
+      transform: rotate(-45deg) translate(3px, -12px)
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -60,12 +104,13 @@
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
   /**/
-
+  
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
   /**/
-
+  .top-menu
+    display: block !important
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
